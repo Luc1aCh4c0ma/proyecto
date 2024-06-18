@@ -59,7 +59,7 @@ export class CatsService {
   }
 
   private validateOwnership(cat: Cat, user: UserActiveInterface) {
-    if (user.role !== Role.ADMIN && cat.userEmail !== user.email) {
+    if (user.role !== Role.USER && cat.userEmail !== user.email) {
       throw new UnauthorizedException();
     }
   }

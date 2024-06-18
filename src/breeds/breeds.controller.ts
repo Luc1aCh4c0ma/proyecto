@@ -13,7 +13,6 @@ import {
   import { CreateBreedDto } from './dto/create-breed.dto';
   import { UpdateBreedDto } from './dto/update-breed.dto';
   
-  @Auth(Role.ADMIN)
   @Controller('breeds')
   export class BreedsController {
     constructor(private readonly breedsService: BreedsService) {}

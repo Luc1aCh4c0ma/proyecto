@@ -9,6 +9,9 @@ export class Breed {
   @Column({ length: 500 })
   name: string;
 
+  // Decorador '@OneToMany' establece una relación uno-a-muchos con la entidad 'Cat'
+  // La función '() => Cat' especifica la entidad relacionada
+  // La función '(cat) => cat.breed' define el campo en la entidad 'Cat' que contiene la relación inversa
   @OneToMany(() => Cat, (cat) => cat.breed)
   cats: Cat[];
 }
